@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div
+    h1=title
+    p Click on any link to update that Document
+    if listdynamicQuestions
+        div 
+        ul
+    each b in listdynamicQuestions
+        li
+            a(href="/updatedQuestion/" + b._id) Question: #{b.question}  Answer: #{b.answer} Author: #{b.author}   Updated At: #{b.updatedAt}

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+   h1 Question Bank New User Signup Page
+   h3= signUpMessage
+   form(action="/signup", name="add-estimation", method="post")
+       div.input
+          span.label Enter User Name
+          input(type="text", name="username")
+       div.input
+           span.label Enter Email Address
+           input(type="text", name="email")
+       div.input
+           span.label Enter Password
+           input(type="text", name="password")
+       div.actions
+           input(type="submit", value="Click to Signup")

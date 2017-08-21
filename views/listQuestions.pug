@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div
+    <h1>#{title}</h1>
+
+    if listQuestions
+        div 
+        ul
+    each b in listQuestions
+        li
+            | Question: #{b.question} </br>
+            | Answer: #{b.answer} </br>
+            | Author: #{b.author} </br>
+            | Updated At: #{b.updatedAt} </br></br>
+
+    form(action="/newQuestion" name="view-questions" method="get")
+        div.input
+        input(type="submit" value="Add Question")

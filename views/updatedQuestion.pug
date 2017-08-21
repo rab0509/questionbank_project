@@ -1,0 +1,19 @@
+extends layout
+ 
+block content
+    h1= title
+    form(action="/updatedQuestion/:_id" name="add-estimation", method="post")
+        div.input
+            span.label Question
+            input(type="text", name="question",
+            value=question)
+        div.input
+            span.label Answer 
+            textarea(name="answer", cols="80", rows="20",
+            value=answer)
+        div.input
+            span.label Author
+            input(type="text", name="author",
+            value=author)
+        div.actions
+            input(type="submit", value="Update Document")

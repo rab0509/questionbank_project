@@ -1,0 +1,9 @@
+extends layout
+
+block content
+   h3 <b>#{title}</b>
+   p Username: #{userName} 
+   p Email: #{eMail}
+   form(action="/listQuestions", name="add-estimation", method="get")
+       div.actions
+           input(type="submit", value="Click to Enter Questionbank")

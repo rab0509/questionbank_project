@@ -1,0 +1,17 @@
+extends layout
+
+block content
+   h1 Welcome Existing Users to the Question Bank
+   p #{error}
+   p <b>User Name: </b> #{userName}
+   p <b>Email: </b> #{email}
+   p <b>JWT: </b> #{token}
+   form(action="/login", name="add-estimation", method="post")
+       div.input
+          span.label User Name
+           input(type="text", name="username")
+       div.input
+           span.label Password
+           input(type="text", name="password")
+       div.actions
+           input(type="submit", value="Click to Login")
